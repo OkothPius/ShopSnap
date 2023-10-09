@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ShopSnap.app.Models;
+namespace ShopSnap.Models;
 
 public partial class Item
 {
