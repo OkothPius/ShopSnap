@@ -1,0 +1,20 @@
+﻿version: '3.8'
+
+services:
+  shopsnap-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: AppGoods
+      POSTGRES_USER: ruko
+      POSTGRES_PASSWORD: pass123
+    ports:
+      - "5432:5432"
